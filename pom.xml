@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.0</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.granossalis</groupId>
+    <artifactId>backend</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>granos-salis</name>
+    <description></description>
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <!-- TEST -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.vaadin.external.google</groupId>
+                    <artifactId>android-json</artifactId>
+                </exclusion>
+            </exclusions>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.vorburger.mariaDB4j</groupId>
+            <artifactId>mariaDB4j</artifactId>
+            <version>3.0.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- JSON -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20231013</version>
+        </dependency>
+        <!-- SERVER -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </dependency>
+        <!-- JPA SPECIFICATION -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!-- MYSQL DRIVER -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- SUBMODULE DATA CONVERTER -->
+        <dependency>
+            <groupId>org.romainlavabre</groupId>
+            <artifactId>dataconverter</artifactId>
+        </dependency>
+        <!-- SUBMODULE TOKEN GENERATOR -->
+        <dependency>
+            <groupId>org.romainlavabre</groupId>
+            <artifactId>tokengen</artifactId>
+        </dependency>
+        <!-- SUBMODULE CRUD -->
+        <dependency>
+            <groupId>org.romainlavabre</groupId>
+            <artifactId>crud</artifactId>
+        </dependency>
+        <!-- SUBMODULE EXCEPTION -->
+        <dependency>
+            <groupId>org.romainlavabre</groupId>
+            <artifactId>exception</artifactId>
+        </dependency>
+        <!-- SUBMODULE DATABASE -->
+        <dependency>
+            <groupId>org.romainlavabre</groupId>
+            <artifactId>database</artifactId>
+        </dependency>
+        <!-- SUBMODULE DATASOURCE -->
+        <dependency>
+            <groupId>com.fairfairpackage</groupId>
+            <artifactId>datasource</artifactId>
+        </dependency>
+        <!-- SUBMODULE ENVIRONMENT -->
+        <dependency>
+            <groupId>org.romainlavabre</groupId>
+            <artifactId>environment</artifactId>
+        </dependency>
+        <!-- SUBMODULE CONTAINER -->
+        <dependency>
+            <groupId>org.romainlavabre</groupId>
+            <artifactId>container</artifactId>
+        </dependency>
+        <!-- SUBMODULE REQUEST -->
+        <dependency>
+            <groupId>org.romainlavabre</groupId>
+            <artifactId>request</artifactId>
+        </dependency>
+        <!-- SUBMODULE EVENT -->
+        <dependency>
+            <groupId>org.romainlavabre</groupId>
+            <artifactId>event</artifactId>
+        </dependency>
+        <!-- SUBMODULE ENCODER -->
+        <dependency>
+            <groupId>org.romainlavabre</groupId>
+            <artifactId>encoder</artifactId>
+        </dependency>
+        <!-- SUBMODULE HISTORY -->
+        <dependency>
+            <groupId>org.romainlavabre</groupId>
+            <artifactId>history</artifactId>
+        </dependency>
+        <!-- SUBMODULE TEMPLATE -->
+        <dependency>
+            <groupId>org.romainlavabre</groupId>
+            <artifactId>template</artifactId>
+        </dependency>
+        <!-- SUBMODULE PDF -->
+        <dependency>
+            <groupId>org.romainlavabre</groupId>
+            <artifactId>pdf</artifactId>
+        </dependency>
+        <!-- SUBMODULE REST -->
+        <dependency>
+            <groupId>org.romainlavabre</groupId>
+            <artifactId>rest</artifactId>
+        </dependency>
+        <!-- SUBMODULE DISTANCE -->
+        <dependency>
+            <groupId>org.romainlavabre</groupId>
+            <artifactId>distance</artifactId>
+        </dependency>
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <!-- SUBMODULE DATA CONVERTER -->
+            <dependency>
+                <groupId>org.romainlavabre</groupId>
+                <artifactId>dataconverter</artifactId>
+                <version>1.0.3</version>
+            </dependency>
+            <!-- SUBMODULE TOKEN GENERATOR -->
+            <dependency>
+                <groupId>org.romainlavabre</groupId>
+                <artifactId>tokengen</artifactId>
+                <version>2.0.0</version>
+            </dependency>
+            <!-- SUBMODULE CRUD -->
+            <dependency>
+                <groupId>org.romainlavabre</groupId>
+                <artifactId>crud</artifactId>
+                <version>3.0.0</version>
+            </dependency>
+            <!-- SUBMODULE EXCEPTION -->
+            <dependency>
+                <groupId>org.romainlavabre</groupId>
+                <artifactId>exception</artifactId>
+                <version>1.2.0</version>
+            </dependency>
+            <!-- SUBMODULE DATABASE -->
+            <dependency>
+                <groupId>org.romainlavabre</groupId>
+                <artifactId>database</artifactId>
+                <version>2.0.0</version>
+            </dependency>
+            <!-- SUBMODULE DATASOURCE -->
+            <dependency>
+                <groupId>com.fairfairpackage</groupId>
+                <artifactId>datasource</artifactId>
+                <version>3.0.1</version>
+            </dependency>
+            <!-- SUBMODULE ENVIRONMENT -->
+            <dependency>
+                <groupId>org.romainlavabre</groupId>
+                <artifactId>environment</artifactId>
+                <version>2.0.0</version>
+            </dependency>
+            <!-- SUBMODULE CONTAINER -->
+            <dependency>
+                <groupId>org.romainlavabre</groupId>
+                <artifactId>container</artifactId>
+                <version>2.0.0</version>
+            </dependency>
+            <!-- SUBMODULE REQUEST -->
+            <dependency>
+                <groupId>org.romainlavabre</groupId>
+                <artifactId>request</artifactId>
+                <version>3.2.0</version>
+            </dependency>
+            <!-- SUBMODULE EVENT -->
+            <dependency>
+                <groupId>org.romainlavabre</groupId>
+                <artifactId>event</artifactId>
+                <version>4.0.0</version>
+            </dependency>
+            <!-- SUBMODULE ENCODER -->
+            <dependency>
+                <groupId>org.romainlavabre</groupId>
+                <artifactId>encoder</artifactId>
+                <version>4.0.2</version>
+            </dependency>
+            <!-- SUBMODULE HISTORY -->
+            <dependency>
+                <groupId>org.romainlavabre</groupId>
+                <artifactId>history</artifactId>
+                <version>4.0.1</version>
+            </dependency>
+            <!-- SUBMODULE TEMPLATE -->
+            <dependency>
+                <groupId>org.romainlavabre</groupId>
+                <artifactId>template</artifactId>
+                <version>3.0.0</version>
+            </dependency>
+            <!-- SUBMODULE PDF -->
+            <dependency>
+                <groupId>org.romainlavabre</groupId>
+                <artifactId>pdf</artifactId>
+                <version>2.0.0</version>
+            </dependency>
+            <!-- SUBMODULE REST -->
+            <dependency>
+                <groupId>org.romainlavabre</groupId>
+                <artifactId>rest</artifactId>
+                <version>2.0.0</version>
+            </dependency>
+            <!-- SUBMODULE DISTANCE -->
+            <dependency>
+                <groupId>org.romainlavabre</groupId>
+                <artifactId>distance</artifactId>
+                <version>2.0.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+    <repositories>
+        <repository>
+            <id>fairfair-maven-repository</id>
+            <url>https://fairfair-maven-repository.s3.eu-west-3.amazonaws.com</url>
+        </repository>
+    </repositories>
+</project>
